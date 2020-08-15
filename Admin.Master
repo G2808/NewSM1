@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="NewSm1.Admin" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - Sales Management</title>
+        <link href="dist/css/styles.css" rel="stylesheet" />
+        <script src="dist/js/scripts.js"></script>
+        <script src="js/all.min.js"></script>
+<style type="text/css">
+    /* for root items */
+             
+    div.RadMenu_Simple ul.rmRootGroup
+    {
+        background-color: #212529;
+        font-size: medium;
+        font-family: Roboto;
+        color:darkgray;
+        line-height:2.5;
+        font-style:normal;
+        
+        
+    }
+     
+     div.RadMenu_Simple .rmLink
+     {
+         color: darkgray;
+     }
+      
+     /* for hover, focused, expanded items */
+/*             div.RadMenu_Simple .rmItem .rmLink:hover,*/
+             div.RadMenu_Simple .rmItem .rmFocused,
+             div.RadMenu_Simple .rmItem .rmSelected,
+             div.RadMenu_Simple .rmItem .rmExpanded {
+            background:white none repeat scroll 0 0;
+/*            border:1px solid black;*/
+            color: black;
+    }
+     
+    /*for subitems */
+     
+    div.RadMenu_Simple .rmGroup
+    {
+       background-color: #212529;
+        color:darkgrey;
+        
+    }
+     
+     div.RadMenu_Simple .rmGroup .rmLink
+     {
+         color: darkgrey;
+     }
+      
+     /* for hover, focused, expanded items */
+     div.RadMenu_Simple .rmGroup .rmItem .rmLink:hover,
+     div.RadMenu_Simple .rmGroup .rmItem .rmFocused,
+     div.RadMenu_Simple .rmGroup .rmItem .rmSelected,
+     div.RadMenu_Simple .rmGroup .rmItem .rmExpanded {
+            background:white none repeat scroll 0 0;
+/*            border:1px solid #fff;*/
+            color: darkgrey;
+    }
+</style>
+    </head>
+      <body class="sb-nav-fixed">
+          <form runat="server">
+               <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                            <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+                    <a class="navbar-brand" href="bannherho.aspx">Sales Management</a>
+                    <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+                            <div class="col-9"></div>
+                            <ul class="navbar-nav ml-auto ml-md-0" style="text-align:right"  >
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Activity Log</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="login.aspx">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                    </ContentTemplate>
+                    </asp:UpdatePanel>
+
+                <div id="layoutSidenav">
+                    <div id="layoutSidenav_nav">
+                        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion" style="margin-top:5px">
+                             <telerik:RadMenu ID="RadMenu1" EnableEmbeddedSkins="false" runat="server" Skin="Simple" Flow="Vertical" Width="100%" Font-Bold="true" Font-Size="Larger" ></telerik:RadMenu>
+                            <div class="sb-sidenav-menu">
+                            </div>
+                            <div class="sb-sidenav-footer">
+                                <div class="small">Logged in as:</div>
+                                  <asp:Label ID="lblUserLogin" runat="server" Text=""></asp:Label>          
+                            </div>
+                        </nav>
+                    </div>
+                    <div id="layoutSidenav_content">
+                        <main>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                        </main>
+                        <footer class="py-4 bg-light mt-auto">
+                            <div class="container-fluid">
+                                <div class="d-flex align-items-center justify-content-between small">
+                                    <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                                    <div>
+                                        <a href="#">Privacy Policy</a>
+                                        &middot;
+                                        <a href="#">Terms &amp; Conditions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                 <script src="js/jquery-3.5.1.min.js"></script>
+                 <script src="../js/bootstrap.bundle.min.js"></script>
+                <script src="../js/scripts.js"></script>
+                <script src="assets/demo/chart-bar-demo.js"></script>--%>
+                <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>--%>
+                <script src="../dist/assets/demo/datatables-demo.js"></script>
+              </form>
+    </body>
+</html>
+
