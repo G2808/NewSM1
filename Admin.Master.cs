@@ -16,7 +16,7 @@ namespace NewSm1
             {
                 if (Session["CODE"] == null) { Response.Redirect("Login.aspx"); }
                 string strSQL;
-                if (Session["ROLE"].ToString() != "Y")
+                if (Session["ISADMIN"].ToString() == "Y")
                 {
                     strSQL = "SELECT menuid,mmenu,target,nullif(submenuid,0) submenuid FROM smmenunew order by seqmain ";
                 }

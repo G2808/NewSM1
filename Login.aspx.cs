@@ -39,11 +39,16 @@ namespace NewSM1
                 {
 
                     Session["CODE"] = reader["CODE"];
-                    Session["ROLE"] = reader["ROLE"];
+                    Session["PROFILE"] = reader["PROFILE"];
                     Session["NAME"] = reader["NAME"];
-
-                    //  Response.Redirect("BANNERHO.aspx");
-                    Response.Redirect("userrights.aspx");
+                    string IsAdmin = "N";
+                    if (Session["PROFILE"].ToString().Trim().ToUpper() == "ADMIN")
+                    {
+                        IsAdmin = "Y";
+                    }
+                    Session["ISADMIN"] = IsAdmin;
+                    Response.Redirect("BANNERHO.aspx");
+                    //Response.Redirect("userrights.aspx");
                 }
 
             }

@@ -23,12 +23,7 @@ namespace NewSm1
             cmd.Parameters.AddWithValue("@startdate", "2019-07-01");
             cmd.Parameters.AddWithValue("@enddate", "2019-07-31");
             cmd.Parameters.AddWithValue("@userid", Session["CODE"].ToString());
-            string IsAdmin = "N";
-            if (Session["ROLE"].ToString().Trim().ToUpper() == "ADMIN")
-            {
-                IsAdmin = "Y";
-            }
-            cmd.Parameters.AddWithValue("@IsAdmin", "Y");
+            cmd.Parameters.AddWithValue("@IsAdmin", Session["ISADMIN"]);
             try
             {
                 con.Open();

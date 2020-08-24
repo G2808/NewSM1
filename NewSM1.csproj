@@ -177,7 +177,7 @@
     <Content Include="SUBHQ.aspx" />
     <Content Include="Team.aspx" />
     <Content Include="tertiarysns .aspx" />
-    <Content Include="TerTiaryStockAndSales.aspx" />
+    <Content Include="TertiaryStockAndSalesMonthly.aspx" />
     <Content Include="UserRights.aspx" />
     <Content Include="Users.aspx" />
     <Content Include="Web.config" />
@@ -289,12 +289,12 @@
     <Compile Include="tertiarysns .aspx.designer.cs">
       <DependentUpon>tertiarysns .aspx</DependentUpon>
     </Compile>
-    <Compile Include="TerTiaryStockAndSales.aspx.cs">
-      <DependentUpon>TerTiaryStockAndSales.aspx</DependentUpon>
+    <Compile Include="TertiaryStockAndSalesMonthly.aspx.cs">
+      <DependentUpon>TertiaryStockAndSalesMonthly.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TerTiaryStockAndSales.aspx.designer.cs">
-      <DependentUpon>TerTiaryStockAndSales.aspx</DependentUpon>
+    <Compile Include="TertiaryStockAndSalesMonthly.aspx.designer.cs">
+      <DependentUpon>TertiaryStockAndSalesMonthly.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserRights.aspx.cs">
       <DependentUpon>UserRights.aspx</DependentUpon>
